@@ -148,7 +148,7 @@ const Services = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#082f49] via-transparent to-transparent flex items-end p-6">
                 <div className="bg-[#082f49]/80 p-4 rounded-xl border border-sky-300/30 backdrop-blur-sm">
                   <h4 className="text-white font-black text-sm font-heading">Scientific Death Reconstruction</h4>
-                  <p className="text-sky-200 text-xs font-semibold mt-1">In-depth objective evaluation of scene, clinical, and post-mortem findings.</p>
+                  <p className="text-sky-200 text-xs font-semibold mt-1">In-depth objective evaluation of crime scene, clinical, and post-mortem findings.</p>
                 </div>
               </div>
             </div>
@@ -283,19 +283,6 @@ const Services = () => {
             </div>
           </div>
 
-          {/* Subtitle Header */}
-          <div className="p-4 rounded-xl bg-[#082f49] border border-sky-300/30 text-base sm:text-lg font-bold text-sky-300">
-            Assistance in Documentation & Opinion in Medico-Legal Cases
-          </div>
-
-          {/* Prominent Retainer Package Callout Banner */}
-          <div className="p-5 sm:p-7 rounded-2xl bg-gradient-to-r from-amber-500/20 via-[#0284c7]/30 to-amber-500/20 border-2 border-amber-400/80 shadow-2xl flex items-center justify-center gap-3 text-center">
-            <Sparkles className="text-amber-300 shrink-0" size={28} />
-            <h3 className="text-amber-200 font-black text-lg sm:text-2xl tracking-wide uppercase drop-shadow">
-              RETAINER PACKAGES ARE AVAILABLE FOR BIG CORPORATE HOSPITALS
-            </h3>
-          </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               "1. Road Traffic Accidents",
@@ -316,6 +303,14 @@ const Services = () => {
                 <span>{item}</span>
               </div>
             ))}
+          </div>
+
+          {/* Prominent Retainer Package Callout Banner */}
+          <div className="p-5 sm:p-7 rounded-2xl bg-gradient-to-r from-amber-500/20 via-[#0284c7]/30 to-amber-500/20 border-2 border-amber-400/80 shadow-2xl flex items-center justify-center gap-3 text-center">
+            <Sparkles className="text-amber-300 shrink-0" size={28} />
+            <h3 className="text-amber-200 font-black text-lg sm:text-2xl tracking-wide uppercase drop-shadow">
+              RETAINER PACKAGES ARE AVAILABLE FOR BIG CORPORATE HOSPITALS
+            </h3>
           </div>
         </div>
 
