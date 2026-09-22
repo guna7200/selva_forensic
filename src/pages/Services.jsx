@@ -27,10 +27,10 @@ const Services = () => {
   };
 
   const categories = [
-    { id: 'death-review', title: 'Independent Forensic Death Review & Reconstruction', icon: User, badge: 'Category I' },
-    { id: 'insurance', title: 'Services to Insurance Companies', icon: Shield, badge: 'Category II' },
-    { id: 'lab-reports', title: 'Medical & Forensic Lab Reports Review', icon: Activity, badge: 'Category III' },
-    { id: 'hospitals', title: 'Hospitals & Doctors', icon: Hospital, badge: 'Category IV' },
+    { id: 'hospitals', title: 'Hospitals & Doctors', icon: Hospital, badge: 'Category I' },
+    { id: 'death-review', title: 'Independent Forensic Death Review & Reconstruction', icon: User, badge: 'Category II' },
+    { id: 'insurance', title: 'Services to Insurance Companies', icon: Shield, badge: 'Category III' },
+    { id: 'lab-reports', title: 'Medical & Forensic Lab Reports Review', icon: Activity, badge: 'Category IV' },
     { id: 'lawyers', title: 'Services to Lawyers', icon: Gavel, badge: 'Category V' },
     { id: 'corporates', title: 'Services to Corporates', icon: Building, badge: 'Category VI' },
   ];
@@ -88,7 +88,55 @@ const Services = () => {
       {/* Detailed Services Content Blocks */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
 
-        {/* I - Independent Forensic Death Review and Reconstruction */}
+        {/* I - Hospitals & Doctors */}
+        <div id="hospitals" className="scroll-mt-40 p-8 sm:p-12 rounded-3xl bg-[#0c4a6e]/90 border-2 border-[#0284c7]/40 space-y-8 shadow-xl">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-[#0284c7]/30 pb-6">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-[#0284c7] border border-sky-300/40 flex items-center justify-center text-white shrink-0">
+                <Hospital size={26} />
+              </div>
+              <div>
+                <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category I</span>
+                <h2 className="text-3xl sm:text-4xl font-black text-white font-heading">Hospitals & Doctors</h2>
+              </div>
+            </div>
+            <Link to="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#0284c7] to-[#0ea5e9] text-white font-extrabold text-sm shadow-lg">
+              Consult for Hospital/MLC
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              "1. Road Traffic Accidents",
+              "2. Suspected Poisoning/Drugs",
+              "3. Sexual Assault",
+              "4. Assault with Disputed history",
+              "5. Child Abuse",
+              "6. Alleged medical negligence",
+              "7. Custodial injury/Death",
+              "8. Death after alleged poisoning",
+              "9. Death after hospital admission following trauma",
+              "10. Sudden / unexplained deaths",
+              "11. Brought dead patients",
+              "12. Domestic / Industrial Accidents"
+            ].map((item, idx) => (
+              <div key={idx} className="p-4 sm:p-5 rounded-xl bg-[#082f49]/60 border border-[#0284c7]/30 flex items-center gap-3 text-base sm:text-lg font-bold text-white shadow-md hover:border-sky-400 transition-all">
+                <CheckCircle2 size={20} className="text-sky-300 shrink-0" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Prominent Retainer Package Callout Banner */}
+          <div className="p-5 sm:p-7 rounded-2xl bg-gradient-to-r from-amber-500/20 via-[#0284c7]/30 to-amber-500/20 border-2 border-amber-400/80 shadow-2xl flex items-center justify-center gap-3 text-center">
+            <Sparkles className="text-amber-300 shrink-0" size={28} />
+            <h3 className="text-amber-200 font-black text-lg sm:text-2xl tracking-wide uppercase drop-shadow">
+              RETAINER PACKAGES ARE AVAILABLE FOR BIG CORPORATE HOSPITALS
+            </h3>
+          </div>
+        </div>
+
+        {/* II - Independent Forensic Death Review and Reconstruction */}
         <div id="death-review" className="scroll-mt-40 p-8 sm:p-12 rounded-3xl bg-[#0c4a6e]/90 border-2 border-[#0284c7]/40 space-y-8 shadow-xl">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-[#0284c7]/30 pb-6">
             <div className="flex items-center gap-3">
@@ -96,7 +144,7 @@ const Services = () => {
                 <User size={26} />
               </div>
               <div>
-                <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category I</span>
+                <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category II</span>
                 <h2 className="text-3xl sm:text-4xl font-black text-white font-heading">Independent Forensic Death Review and Reconstruction</h2>
               </div>
             </div>
@@ -138,7 +186,7 @@ const Services = () => {
               ))}
             </div>
 
-            {/* Category 1 Image Feature Card */}
+            {/* Category Image Feature Card */}
             <div className="lg:col-span-4 rounded-3xl overflow-hidden border-2 border-[#0284c7]/50 shadow-2xl relative h-80 lg:h-full min-h-[300px]">
               <img 
                 src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" 
@@ -155,7 +203,7 @@ const Services = () => {
           </div>
         </div>
 
-        {/* II - Services to Insurance Companies */}
+        {/* III - Services to Insurance Companies */}
         <div id="insurance" className="scroll-mt-40 p-8 sm:p-12 rounded-3xl bg-[#0c4a6e]/90 border-2 border-[#0284c7]/40 space-y-8 shadow-xl">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-[#0284c7]/30 pb-6">
             <div className="flex items-center gap-3">
@@ -163,7 +211,7 @@ const Services = () => {
                 <Shield size={26} />
               </div>
               <div>
-                <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category II</span>
+                <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category III</span>
                 <h2 className="text-3xl sm:text-4xl font-black text-white font-heading">Service to Insurance Companies</h2>
               </div>
             </div>
@@ -180,7 +228,7 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Category 2 Image Feature Card */}
+            {/* Category Image Feature Card */}
             <div className="lg:col-span-4 rounded-3xl overflow-hidden border-2 border-[#0284c7]/50 shadow-2xl relative h-80 lg:h-full min-h-[300px] order-2 lg:order-1">
               <img 
                 src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" 
@@ -217,7 +265,7 @@ const Services = () => {
           </div>
         </div>
 
-        {/* III - Medical & Forensic Lab Reports Review */}
+        {/* IV - Medical & Forensic Lab Reports Review */}
         <div id="lab-reports" className="scroll-mt-40 p-8 sm:p-12 rounded-3xl bg-[#0c4a6e]/90 border-2 border-[#0284c7]/40 space-y-8 shadow-xl">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-[#0284c7]/30 pb-6">
             <div className="flex items-center gap-3">
@@ -225,7 +273,7 @@ const Services = () => {
                 <Activity size={26} />
               </div>
               <div>
-                <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category III</span>
+                <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category IV</span>
                 <h2 className="text-3xl sm:text-4xl font-black text-white font-heading">Medical & Forensic Lab Reports Review</h2>
               </div>
             </div>
@@ -252,7 +300,7 @@ const Services = () => {
               ))}
             </div>
 
-            {/* Category 3 Image Feature Card */}
+            {/* Category Image Feature Card */}
             <div className="lg:col-span-4 rounded-3xl overflow-hidden border-2 border-[#0284c7]/50 shadow-2xl relative h-80 lg:h-full min-h-[300px]">
               <img 
                 src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=800&q=80" 
@@ -266,51 +314,6 @@ const Services = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* IV - Hospitals & Doctors */}
-        <div id="hospitals" className="scroll-mt-40 p-8 sm:p-12 rounded-3xl bg-[#0c4a6e]/90 border-2 border-[#0284c7]/40 space-y-8 shadow-xl">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-[#0284c7]/30 pb-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-[#0284c7] border border-sky-300/40 flex items-center justify-center text-white shrink-0">
-                <Hospital size={26} />
-              </div>
-              <div>
-                <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category IV</span>
-                <h2 className="text-3xl sm:text-4xl font-black text-white font-heading">Hospitals & Doctors</h2>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              "1. Road Traffic Accidents",
-              "2. Suspected Poisoning/Drugs",
-              "3. Sexual Assault",
-              "4. Assault with Disputed history",
-              "5. Child Abuse",
-              "6. Alleged medical negligence",
-              "7. Custodial injury/Death",
-              "8. Death after alleged poisoning",
-              "9. Death after hospital admission following trauma",
-              "10. Sudden / unexplained deaths",
-              "11. Brought dead patients",
-              "12. Domestic / Industrial Accidents"
-            ].map((item, idx) => (
-              <div key={idx} className="p-4 sm:p-5 rounded-xl bg-[#082f49]/60 border border-[#0284c7]/30 flex items-center gap-3 text-base sm:text-lg font-bold text-white shadow-md hover:border-sky-400 transition-all">
-                <CheckCircle2 size={20} className="text-sky-300 shrink-0" />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Prominent Retainer Package Callout Banner */}
-          <div className="p-5 sm:p-7 rounded-2xl bg-gradient-to-r from-amber-500/20 via-[#0284c7]/30 to-amber-500/20 border-2 border-amber-400/80 shadow-2xl flex items-center justify-center gap-3 text-center">
-            <Sparkles className="text-amber-300 shrink-0" size={28} />
-            <h3 className="text-amber-200 font-black text-lg sm:text-2xl tracking-wide uppercase drop-shadow">
-              RETAINER PACKAGES ARE AVAILABLE FOR BIG CORPORATE HOSPITALS
-            </h3>
           </div>
         </div>
 
