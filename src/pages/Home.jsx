@@ -74,7 +74,7 @@ const Home = () => {
     {
       num: "10",
       title: "Case Related Expert Consultation",
-      desc: "Expert assistance for legal trials, case strategy, cross-examination prep, and expert testimony rebuttal.",
+      desc: "Expert assistance for legal trials, case strategy, cross-examination preparation, and expert testimony rebuttal.",
       icon: Gavel,
       img: "https://images.unsplash.com/photo-1436450412740-6b988f486c6b?auto=format&fit=crop&w=600&q=80"
     }
@@ -85,7 +85,7 @@ const Home = () => {
     { title: "Forensic Death Review", desc: "Clarity on sudden death, cause/manner of death, and independent reconstruction.", icon: UserCheck, link: "/services/death-review", img: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=600&q=80" },
     { title: "Insurance Companies", desc: "Independent medical evidence reconstruction for high-value & suspicious claims.", icon: ShieldCheck, link: "/services/insurance", img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" },
     { title: "Medical & Forensic Lab Reports", desc: "Toxicology, viscera, DNA, histopathology and radiology report reviews.", icon: Activity, link: "/services/lab-reports", img: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=600&q=80" },
-    { title: "Lawyers", desc: "Scientific evidence analysis, cross-examination prep, trial assistance & expert rebuttal.", icon: Gavel, link: "/services/lawyers", img: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=600&q=80" },
+    { title: "Lawyers", desc: "Scientific evidence analysis, cross-examination preparation, trial assistance & expert rebuttal.", icon: Gavel, link: "/services/lawyers", img: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=600&q=80" },
     { title: "Corporates", desc: "Workplace fatalities, serious injuries, and workplace safety compliance.", icon: HeartPulse, link: "/services/corporates", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" },
   ];
 

@@ -14,7 +14,7 @@ const Navbar = () => {
     { name: 'Insurance Companies', path: '/services/insurance', desc: 'Accidental, suspicious & early policy death claims' },
     { name: 'Medical & Forensic Lab Reports', path: '/services/lab-reports', desc: 'Toxicology, viscera, DNA & histopathology reports' },
     { name: 'Hospitals & Doctors', path: '/services/hospitals', desc: 'MLC procedures, RTA, poisoning & negligence' },
-    { name: 'Services to Lawyers', path: '/services/lawyers', desc: 'Criminal, writ & cross-examination prep' },
+    { name: 'Services to Lawyers', path: '/services/lawyers', desc: 'Criminal, writ & cross-examination preparation' },
     { name: 'Services to Corporates', path: '/services/corporates', desc: 'Workplace fatalities, injuries & sexual assault' },
   ];
 

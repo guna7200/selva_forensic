@@ -56,7 +56,7 @@ const Services = () => {
             Comprehensive Services Offered
           </h1>
           <p className="text-white text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed font-extrabold drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] bg-[#082f49]/70 p-4 rounded-2xl border border-sky-300/30">
-            From independent death reconstruction and insurance claim verification to comprehensive forensic lab report reviews, legal cross-examination prep, and hospital medicolegal documentation.
+            From independent death reconstruction and insurance claim verification to comprehensive forensic lab report reviews, legal cross-examination preparation, and hospital medicolegal documentation.
           </p>
         </div>
       </section>

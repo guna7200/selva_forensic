@@ -105,7 +105,7 @@ const ContactUs = () => {
                   >
                     <option value="family">Family (Sudden Death / Claim Rejection)</option>
                     <option value="insurance">Insurance Death Investigation</option>
-                    <option value="lawyers">Legal Counsel / Trial Prep</option>
+                    <option value="lawyers">Legal Counsel / Trial Preparation</option>
                     <option value="individuals">Post Mortem Peer Review / Cold Case</option>
                     <option value="hospitals">Hospitals & Doctors (Medicolegal Audit)</option>
                     <option value="corporates">Corporate Scrutiny & Safety</option>
