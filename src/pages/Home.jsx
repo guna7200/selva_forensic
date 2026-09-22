@@ -169,34 +169,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Forensic Visual Imagery Spotlight Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="relative h-64 rounded-2xl overflow-hidden border-2 border-[#0284c7] shadow-2xl group">
-            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="Forensic Toxicology Laboratory" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#082f49] via-[#082f49]/40 to-transparent p-6 flex flex-col justify-end">
-              <span className="text-xs uppercase font-black text-sky-300 tracking-wider">Scientific Rigor</span>
-              <h4 className="text-xl font-black text-white font-heading">Toxicology & Viscera Analysis</h4>
-            </div>
-          </div>
 
-          <div className="relative h-64 rounded-2xl overflow-hidden border-2 border-[#0284c7] shadow-2xl group">
-            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Medical Chart Audit" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#082f49] via-[#082f49]/40 to-transparent p-6 flex flex-col justify-end">
-              <span className="text-xs uppercase font-black text-sky-300 tracking-wider">Independent Audit</span>
-              <h4 className="text-xl font-black text-white font-heading">Post-Mortem & Medical Record Review</h4>
-            </div>
-          </div>
-
-          <div className="relative h-64 rounded-2xl overflow-hidden border-2 border-[#0284c7] shadow-2xl group">
-            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Case Evidence Gavel" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#082f49] via-[#082f49]/40 to-transparent p-6 flex flex-col justify-end">
-              <span className="text-xs uppercase font-black text-sky-300 tracking-wider">Case Ready</span>
-              <h4 className="text-xl font-black text-white font-heading">Legal Defense & Expert Testimony</h4>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Target Audiences Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
