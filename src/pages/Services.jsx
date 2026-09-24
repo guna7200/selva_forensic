@@ -333,31 +333,62 @@ const Services = () => {
           </div>
 
           <div className="space-y-6">
-            <div className="p-5 rounded-xl bg-[#082f49]/60 border border-sky-300/30 text-base text-slate-100">
-              <strong>How to Challenge cases Medically & Scientifically and What can be defended.</strong>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mt-4 text-sm text-slate-200">
-                <div className="p-3 rounded-lg bg-[#082f49] border border-[#0284c7]/30 font-medium">• What happened medically?</div>
-                <div className="p-3 rounded-lg bg-[#082f49] border border-[#0284c7]/30 font-medium">• What was documented?</div>
-                <div className="p-3 rounded-lg bg-[#082f49] border border-[#0284c7]/30 font-medium">• What is defensible?</div>
-                <div className="p-3 rounded-lg bg-[#082f49] border border-[#0284c7]/30 font-medium">• What remains unexplained?</div>
+            {/* Callout Header Card */}
+            <div className="p-6 rounded-2xl bg-[#082f49]/90 border-2 border-sky-400/40 space-y-4 text-slate-100 shadow-lg">
+              <h3 className="text-xl sm:text-2xl font-black text-sky-300 font-heading">
+                Lawyers Need Forensic Medical Expertise Before Trial in Criminal Cases
+              </h3>
+              <p className="text-base sm:text-lg leading-relaxed text-slate-100 font-medium">
+                An independent Forensic Doctor can effectively function as a <strong className="text-sky-300 font-extrabold uppercase">Technical Consultant to the Lawyer</strong>, helping to translate medical evidence into legally relevant evidence material.
+              </p>
+              
+              <div className="pt-2 border-t border-[#0284c7]/30">
+                <p className="text-base font-bold text-sky-200 mb-3">He will help you to understand:</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <div className="p-3.5 rounded-xl bg-[#0c4a6e] border border-sky-300/30 flex items-start gap-2 text-sm sm:text-base font-semibold text-white">
+                    <span className="text-sky-300 text-lg font-bold">➔</span>
+                    <span>What the medical evidence proves</span>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-[#0c4a6e] border border-sky-300/30 flex items-start gap-2 text-sm sm:text-base font-semibold text-white">
+                    <span className="text-sky-300 text-lg font-bold">➔</span>
+                    <span>What it merely suggests</span>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-[#0c4a6e] border border-sky-300/30 flex items-start gap-2 text-sm sm:text-base font-semibold text-white">
+                    <span className="text-sky-300 text-lg font-bold">➔</span>
+                    <span>What it cannot establish</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-[#0284c7]/30 text-base sm:text-lg font-semibold text-sky-100">
+                He can go through medical records meticulously and prepare a list of questions effective for <strong className="text-sky-300 font-extrabold underline decoration-sky-400 underline-offset-4 uppercase">effective cross-examination</strong>.
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                "1. Criminal Litigation",
-                "2. Insurance Disputes",
-                "3. Personal Injury litigation",
-                "4. Motor Accident matters",
-                "5. Compensation / disability disputes",
-                "6. Corporate litigation",
-                "7. Medical Negligence cases"
-              ].map((item, idx) => (
-                <div key={idx} className="p-4 sm:p-5 rounded-xl bg-[#082f49]/60 border border-[#0284c7]/30 flex items-center gap-3 text-base sm:text-lg font-bold text-white shadow-md hover:border-sky-400 transition-all">
-                  <CheckCircle2 size={20} className="text-sky-300 shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
+            {/* List Header & Grid */}
+            <div className="pt-4 space-y-4">
+              <h3 className="text-xl sm:text-2xl font-black text-white font-heading">
+                Where Lawyers Need the Services of a Forensic Medical Expert
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  "1. Homicide (Murder) cases",
+                  "2. Suspicious death cases",
+                  "3. Sexual offence cases",
+                  "4. Road Traffic & workplace Accidents",
+                  "5. Medical Negligence cases",
+                  "6. Insurance & compensation cases",
+                  "7. Child abuse cases",
+                  "8. Poisoning & intoxication cases",
+                  "9. Custodial death & Torture cases",
+                  "10. Case room Assistance"
+                ].map((item, idx) => (
+                  <div key={idx} className="p-4 sm:p-5 rounded-xl bg-[#082f49]/60 border border-[#0284c7]/30 flex items-center gap-3 text-base sm:text-lg font-bold text-white shadow-md hover:border-sky-400 transition-all">
+                    <CheckCircle2 size={20} className="text-sky-300 shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
