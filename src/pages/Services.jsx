@@ -381,13 +381,18 @@ const Services = () => {
                   "7. Child abuse cases",
                   "8. Poisoning & intoxication cases",
                   "9. Custodial death & Torture cases",
-                  "10. Case room Assistance"
                 ].map((item, idx) => (
                   <div key={idx} className="p-4 sm:p-5 rounded-xl bg-[#082f49]/60 border border-[#0284c7]/30 flex items-center gap-3 text-base sm:text-lg font-bold text-white shadow-md hover:border-sky-400 transition-all">
                     <CheckCircle2 size={20} className="text-sky-300 shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
+                
+                {/* 10. Starred Key Feature Highlight Card */}
+                <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-r from-amber-500/20 via-[#0284c7]/40 to-amber-500/20 border-2 border-amber-400/80 flex items-center gap-3 text-base sm:text-lg font-black text-amber-200 shadow-xl col-span-1 sm:col-span-2 lg:col-span-3 justify-center text-center">
+                  <Sparkles size={24} className="text-amber-300 shrink-0 animate-pulse" />
+                  <span>10. Courtroom Assistance & Trial Expert Consultation</span>
+                </div>
               </div>
             </div>
           </div>
