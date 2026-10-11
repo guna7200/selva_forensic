@@ -11,7 +11,7 @@ const Home = () => {
     {
       num: "01",
       title: "Consultation on Medico-Legal Matters",
-      desc: "Expert guidance across all complex medico-legal situations, injury analysis, and legal medical documentation.",
+      desc: "Expert guidance across all complex medico-legal situations, injury analysis, and medico-legal documentation.",
       icon: Scale,
       img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80"
     },
@@ -25,7 +25,7 @@ const Home = () => {
     {
       num: "03",
       title: "Medical Negligence Review & Screening",
-      desc: "Thorough review of clinical charts and hospital protocols to establish or counter medical malpractice claims.",
+      desc: "Thorough review of clinical records and hospital documents to establish or counter medical malpractice claims.",
       icon: HeartPulse,
       img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80"
     },
@@ -60,14 +60,14 @@ const Home = () => {
     {
       num: "08",
       title: "Medical Negligence & Record Analysis",
-      desc: "Detailed forensic auditing of hospital charts, treatment logs, and medical records.",
+      desc: "Screening of hospital records.For any evidence of medical negligence.",
       icon: FileText,
       img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
     },
     {
       num: "09",
       title: "Insurance Claims Medical Opinion",
-      desc: "Medical foundation evaluation for disputed life, accidental, and suspicious death insurance claims.",
+      desc: "Thorough analysis of medical records for disputed insurance claims.",
       icon: Award,
       img: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80"
     },
@@ -151,7 +151,7 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-10 border-t-2 border-[#0284c7]">
             <div className="p-4 rounded-xl bg-[#082f49]/95 border-2 border-sky-300/30 text-center shadow-2xl">
               <div className="text-sky-300 text-2xl font-black font-heading">100%</div>
-              <div className="text-white text-xs font-black mt-1">Confidential & Online</div>
+              <div className="text-white text-xs font-black mt-1">Confidential & Based on Documents</div>
             </div>
             <div className="p-4 rounded-xl bg-[#082f49]/95 border-2 border-sky-300/30 text-center shadow-2xl">
               <div className="text-sky-300 text-2xl font-black font-heading">All India</div>

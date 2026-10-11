@@ -10,12 +10,12 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   const serviceCategories = [
-    { name: 'Forensic Death Review', path: '/services/death-review', desc: 'Postmortem review, injury reconstruction & cause of death' },
-    { name: 'Insurance Companies', path: '/services/insurance', desc: 'Accidental, suspicious & early policy death claims' },
-    { name: 'Medical & Forensic Lab Reports', path: '/services/lab-reports', desc: 'Toxicology, viscera, DNA & histopathology reports' },
     { name: 'Hospitals & Doctors', path: '/services/hospitals', desc: 'MLC procedures, RTA, poisoning & negligence' },
+    { name: 'Forensic Death Review', path: '/services/death-review', desc: 'Postmortem review & injury reconstruction based on documents' },
+    { name: 'Insurance Companies', path: '/services/insurance', desc: 'Document based accidental & suspicious death claims' },
+    { name: 'Medical & Forensic Lab Reports', path: '/services/lab-reports', desc: 'Toxicology, viscera, DNA & histopathology reports' },
     { name: 'Services to Lawyers', path: '/services/lawyers', desc: 'Criminal, writ & cross-examination preparation' },
-    { name: 'Services to Corporates', path: '/services/corporates', desc: 'Workplace fatalities, injuries & sexual assault' },
+    { name: 'Services to Corporates', path: '/services/corporates', desc: 'Workplace fatalities, injuries & harassment' },
   ];
 
   return (

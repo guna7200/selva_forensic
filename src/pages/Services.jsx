@@ -28,7 +28,7 @@ const Services = () => {
 
   const categories = [
     { id: 'hospitals', title: 'Hospitals & Doctors', icon: Hospital, badge: 'Category I' },
-    { id: 'death-review', title: 'Independent Forensic Death Review & Reconstruction', icon: User, badge: 'Category II' },
+    { id: 'death-review', title: 'Independent Forensic Death Review & Reconstruction Based on Documents', icon: User, badge: 'Category II' },
     { id: 'insurance', title: 'Services to Insurance Companies', icon: Shield, badge: 'Category III' },
     { id: 'lab-reports', title: 'Medical & Forensic Lab Reports Review', icon: Activity, badge: 'Category IV' },
     { id: 'lawyers', title: 'Services to Lawyers', icon: Gavel, badge: 'Category V' },
@@ -96,13 +96,25 @@ const Services = () => {
                 <Hospital size={26} />
               </div>
               <div>
-                <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category I</span>
+                <div className="flex flex-wrap items-center gap-2 mb-1">
+                  <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category I</span>
+                  <span className="px-3 py-0.5 rounded-full bg-rose-500/20 border border-rose-400 text-rose-300 text-xs font-black tracking-wide uppercase">
+                    Consultation & Opinion Based on Documents
+                  </span>
+                </div>
                 <h2 className="text-3xl sm:text-4xl font-black text-white font-heading">Hospitals & Doctors</h2>
               </div>
             </div>
             <Link to="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#0284c7] to-[#0ea5e9] text-white font-extrabold text-sm shadow-lg">
               Consult for Hospital/MLC
             </Link>
+          </div>
+
+          {/* Document Review Callout Banner */}
+          <div className="p-4 rounded-xl bg-[#082f49] border-2 border-rose-400/60 flex items-center justify-center text-center shadow-md">
+            <span className="text-rose-300 sm:text-base font-black tracking-wider uppercase">
+              ONLY DOCUMENT REVIEW & EXPERT OPINION
+            </span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -145,7 +157,9 @@ const Services = () => {
               </div>
               <div>
                 <span className="text-sm font-black text-sky-300 uppercase tracking-widest">Category II</span>
-                <h2 className="text-3xl sm:text-4xl font-black text-white font-heading">Independent Forensic Death Review and Reconstruction</h2>
+                <h2 className="text-3xl sm:text-4xl font-black text-white font-heading">
+                  Independent Forensic Death Review and Reconstruction Based on Documents
+                </h2>
               </div>
             </div>
             <Link to="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#0284c7] to-[#0ea5e9] text-white font-extrabold text-sm shadow-lg">
@@ -196,7 +210,7 @@ const Services = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#082f49] via-transparent to-transparent flex items-end p-6">
                 <div className="bg-[#082f49]/80 p-4 rounded-xl border border-sky-300/30 backdrop-blur-sm">
                   <h4 className="text-white font-black text-sm font-heading">Scientific Death Reconstruction</h4>
-                  <p className="text-sky-200 text-xs font-semibold mt-1">In-depth objective evaluation of crime scene, clinical, and post-mortem findings.</p>
+                  <p className="text-sky-200 text-xs font-semibold mt-1">In-depth objective evaluation of Crime scene, clinical and Postmortem documents.</p>
                 </div>
               </div>
             </div>
@@ -223,7 +237,7 @@ const Services = () => {
               <strong className="text-sky-300 font-bold">Insurance investigator –</strong> establishes the facts surrounding the claim.
             </p>
             <p>
-              <strong className="text-sky-300 font-bold">Forensic Doctor –</strong> Interprets the medical and forensic evidence and answers whether the evidence supports the claimed medical circumstances.
+              <strong className="text-sky-300 font-bold">Forensic Doctor –</strong> Interprets the medical documents and Forensic reports and answers whether the evidence supports the claimed medical circumstances.
             </p>
           </div>
 
@@ -236,9 +250,12 @@ const Services = () => {
                 className="w-full h-full object-cover" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#082f49] via-transparent to-transparent flex items-end p-6">
-                <div className="bg-[#082f49]/80 p-4 rounded-xl border border-sky-300/30 backdrop-blur-sm">
+                <div className="bg-[#082f49]/80 p-4 rounded-xl border border-sky-300/30 backdrop-blur-sm space-y-1">
+                  <span className="inline-block px-2.5 py-0.5 rounded-md bg-rose-500/30 border border-rose-400 text-rose-300 text-[11px] font-black uppercase tracking-wider">
+                    Document Based
+                  </span>
                   <h4 className="text-white font-black text-sm font-heading">Insurance Claim Verification</h4>
-                  <p className="text-sky-200 text-xs font-semibold mt-1">Establishing causation and medical truth in high-value disputed claims.</p>
+                  <p className="text-sky-200 text-xs font-semibold mt-1">Establishing causation and medical facts in high-value disputed claims.</p>
                 </div>
               </div>
             </div>
@@ -310,7 +327,7 @@ const Services = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#082f49] via-transparent to-transparent flex items-end p-6">
                 <div className="bg-[#082f49]/80 p-4 rounded-xl border border-sky-300/30 backdrop-blur-sm">
                   <h4 className="text-white font-black text-sm font-heading">Forensic Lab Reports Review</h4>
-                  <p className="text-sky-200 text-xs font-semibold mt-1">In-depth analysis of Toxicology, Viscera, Histopathology, and DNA findings.</p>
+                  <p className="text-sky-200 text-xs font-semibold mt-1">In-depth analysis of Toxicology, Viscera, Histopathology, and DNA Reports.</p>
                 </div>
               </div>
             </div>
@@ -361,7 +378,7 @@ const Services = () => {
               </div>
 
               <div className="pt-3 border-t border-[#0284c7]/30 text-base sm:text-lg font-semibold text-sky-100">
-                He can go through medical records meticulously and prepare a list of questions effective for <strong className="text-sky-300 font-extrabold underline decoration-sky-400 underline-offset-4 uppercase">effective cross-examination</strong>.
+                He can go through medical records meticulously and prepare a list of questions for <strong className="text-sky-300 font-extrabold underline decoration-sky-400 underline-offset-4 uppercase">effective cross-examination</strong>.
               </div>
             </div>
 
@@ -391,7 +408,7 @@ const Services = () => {
                 {/* 10. Starred Key Feature Highlight Card */}
                 <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-r from-amber-500/20 via-[#0284c7]/40 to-amber-500/20 border-2 border-amber-400/80 flex items-center gap-3 text-base sm:text-lg font-black text-amber-200 shadow-xl col-span-1 sm:col-span-2 lg:col-span-3 justify-center text-center">
                   <Sparkles size={24} className="text-amber-300 shrink-0 animate-pulse" />
-                  <span>10. Courtroom Assistance & Trial Expert Consultation</span>
+                  <span>10. Courtroom Assistance</span>
                 </div>
               </div>
             </div>
@@ -416,7 +433,7 @@ const Services = () => {
               "2. Independent medical opinions",
               "3. Workplace fatalities",
               "4. Serious workplace injuries",
-              "5. Forensic Medical Consultation for Sexual Assault in workplace",
+              "5. Forensic Medical Consultation for Workplace Harassment",
               "6. Employee death - Death Investigation"
             ].map((item, idx) => (
               <div key={idx} className="p-4 sm:p-5 rounded-xl bg-[#082f49]/60 border border-[#0284c7]/30 flex items-center gap-3 text-base sm:text-lg font-bold text-white shadow-md hover:border-sky-400 transition-all">
@@ -424,6 +441,13 @@ const Services = () => {
                 <span>{item}</span>
               </div>
             ))}
+          </div>
+
+          {/* Document Based Callout Banner */}
+          <div className="p-4 sm:p-5 rounded-xl bg-[#082f49] border-2 border-sky-400/50 flex items-center justify-center text-center shadow-lg">
+            <span className="text-sky-300 font-black text-base sm:text-lg tracking-wider uppercase">
+              DOCUMENT BASED OPINION & CONSULTATION
+            </span>
           </div>
         </div>
 

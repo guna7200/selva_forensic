@@ -20,11 +20,11 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-xs text-sky-100 leading-relaxed font-medium">
-              Online Confidential Consultation & Expert Opinion on all Medico-Legal matters, forensic death investigations, medical negligence screening, and post-mortem report reviews across India.
+              Online Confidential Consultation & Expert opinion based on documents on all medicolegal matters, forensic death investigations, medical negligence screening, and post-mortem report reviews across India.
             </p>
             <div className="flex items-center gap-2 text-xs text-sky-200 bg-[#0c4a6e]/70 p-2.5 rounded-xl border border-sky-400/30 font-semibold">
               <ShieldCheck size={16} className="shrink-0 text-sky-300" />
-              <span>100% Confidential & Independent Legal Analysis</span>
+              <span>100% Confidential & Independent medical & Forensic analysis based on documents</span>
             </div>
           </div>
 

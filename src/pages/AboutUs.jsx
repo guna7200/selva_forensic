@@ -24,7 +24,7 @@ const AboutUs = () => {
             Pioneering Medico-Legal & Forensic Excellence
           </h1>
           <p className="text-white text-base sm:text-lg max-w-3xl mx-auto leading-relaxed font-extrabold drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] bg-[#082f49]/70 p-4 rounded-2xl border border-sky-300/30">
-            Delivering nation-wide online confidential consultations, independent medical evidence reconstruction, and expert opinion across complex legal and clinical cases.
+            Delivering nation-wide online confidential consultations, independent medical evidence reconstruction, and expert opinion across complex legal and medico-legal.
           </p>
         </div>
       </section>
@@ -34,7 +34,7 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-2xl sm:text-3xl font-black text-white font-heading">
-              Bridging Medicine, Forensic Science & The Judicial System
+              Bridging Medicine, Forensic Science & crime investigation.
             </h2>
             <p className="text-slate-100 text-sm sm:text-base leading-relaxed">
               At <strong>Selvas Forensic Medical Centre</strong>, we specialize in reviewing complex medico-legal cases where medical records, post-mortem findings, and toxicology data form the bedrock of legal decisions.
@@ -55,7 +55,7 @@ const AboutUs = () => {
                 <Eye className="text-sky-300 shrink-0 mt-1" size={20} />
                 <div>
                   <h4 className="text-white text-sm font-bold font-heading">Our Vision</h4>
-                  <p className="text-slate-100 text-xs mt-1">To be India's premier online forensic consultation centre for families, lawyers, and insurers.</p>
+                  <p className="text-slate-100 text-xs mt-1">To be India's premier online forensic consultation centre for doctor,lawyers,insurance and any individual.</p>
                 </div>
               </div>
             </div>
