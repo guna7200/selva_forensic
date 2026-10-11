@@ -208,9 +208,11 @@ const Founder = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#082f49]/95 via-[#082f49]/60 to-transparent flex items-center p-8 sm:p-12">
             <div className="max-w-xl space-y-2">
               <span className="text-xs font-black text-sky-300 uppercase tracking-widest block">Scientific Excellence</span>
-              <h3 className="text-2xl sm:text-3xl font-black text-white font-heading">Comprehensive Post-Mortem & Evidence Peer Review</h3>
+              <h3 className="text-2xl sm:text-3xl font-black text-white font-heading">
+                Comprehensive Postmortem Review & Other Medical Evidence Peer Review
+              </h3>
               <p className="text-sky-100 text-xs sm:text-sm font-semibold">
-                Unbiased, evidence-grounded evaluation of autopsy papers, inquest documents, histology, and toxicological findings.
+                Unbiased, evidence based evaluation of autopsy reports, viscera & histopathological reports.
               </p>
             </div>
           </div>
@@ -222,10 +224,12 @@ const Founder = () => {
             <div className="w-12 h-12 rounded-xl bg-[#0284c7] border border-sky-300/40 flex items-center justify-center text-white shrink-0">
               <Stethoscope size={26} />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-white font-heading">Sexual-Assault Medico-Legal Documentation and Opinion</h2>
+            <h2 className="text-2xl sm:text-3xl font-black text-white font-heading">
+              Sexual Assault & Medicolegal Documentation
+            </h2>
           </div>
           <p className="text-slate-100 text-base sm:text-lg leading-relaxed font-medium">
-            Dr. Selvakumar has extensive experience in sexual-assault cases documentation and has <strong>trained Obstetricians in the medico-legal examination and documentation of sexual-assault victims</strong>, in accordance with the recent Government of India guidelines.
+            Dr. Selvakumar has extensive experience in documenting sexual assault cases. He has conducted workshops and medical education programmes to train the doctors about the recent guidelines of Govt of India on Medical Examination of Victims and Accused in sexual assault cases.
           </p>
         </div>
 

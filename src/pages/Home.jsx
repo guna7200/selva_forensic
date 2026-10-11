@@ -127,7 +127,7 @@ const Home = () => {
           </h1>
 
           <p className="text-white text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-black drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] bg-[#082f49]/70 p-4 rounded-2xl border border-sky-300/30 backdrop-blur-sm">
-            Independent, authoritative, scientific reconstruction of medical evidence, post-mortem reviews, medical negligence screening, and medico-legal case consultations across India.
+            Independent, Document based, Scientific reconstruction of medical evidence, post-mortem reviews, medical negligence screening, and medico-legal case consultations across India.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -151,19 +151,19 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-10 border-t-2 border-[#0284c7]">
             <div className="p-4 rounded-xl bg-[#082f49]/95 border-2 border-sky-300/30 text-center shadow-2xl">
               <div className="text-sky-300 text-2xl font-black font-heading">100%</div>
-              <div className="text-white text-xs font-black mt-1">Confidential & Based on Documents</div>
+              <div className="text-white text-xs font-black mt-1">Confidential & Online</div>
             </div>
             <div className="p-4 rounded-xl bg-[#082f49]/95 border-2 border-sky-300/30 text-center shadow-2xl">
               <div className="text-sky-300 text-2xl font-black font-heading">All India</div>
-              <div className="text-white text-xs font-black mt-1">Coverage & Online Review</div>
+              <div className="text-white text-xs font-black mt-1">Online Review</div>
             </div>
             <div className="p-4 rounded-xl bg-[#082f49]/95 border-2 border-sky-300/30 text-center shadow-2xl">
               <div className="text-sky-300 text-2xl font-black font-heading">Scientific</div>
-              <div className="text-white text-xs font-black mt-1">Autopsy & Record Reconstruction</div>
+              <div className="text-white text-xs font-black mt-1">Autopsy Review & Reconstruction</div>
             </div>
             <div className="p-4 rounded-xl bg-[#082f49]/95 border-2 border-sky-300/30 text-center shadow-2xl">
-              <div className="text-sky-300 text-2xl font-black font-heading">Case Ready</div>
-              <div className="text-white text-xs font-black mt-1">Expert Medico-Legal Strategy</div>
+              <div className="text-sky-300 text-2xl font-black font-heading">Case Study</div>
+              <div className="text-white text-xs font-black mt-1">Expert Medicolegal Strategy</div>
             </div>
           </div>
         </div>
