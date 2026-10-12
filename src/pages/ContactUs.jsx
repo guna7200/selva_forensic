@@ -1,18 +1,39 @@
 import React, { useState } from 'react';
-import { Phone, MapPin, ShieldCheck, Send, CheckCircle2, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, ShieldCheck, Send, CheckCircle2, Clock } from 'lucide-react';
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
+    email: '',
     category: 'family',
     message: ''
   });
 
+  const categoryLabels = {
+    family: 'Family (Sudden Death / Claim Rejection)',
+    insurance: 'Insurance Death Investigation',
+    lawyers: 'Legal Counsel / Trial Preparation',
+    individuals: 'Post Mortem Peer Review / Cold Case',
+    hospitals: 'Hospitals & Doctors (Medicolegal Audit)',
+    corporates: 'Corporate Scrutiny & Safety'
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+
+    const subject = encodeURIComponent(`Confidential Case Review Request - ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Email: ${formData.email || 'Not provided'}\n` +
+      `Service Category: ${categoryLabels[formData.category] || formData.category}\n\n` +
+      `Case Summary & Key Questions:\n${formData.message}\n`
+    );
+
+    window.location.href = `mailto:forensicselva@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -71,7 +92,7 @@ const ContactUs = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4 text-xs sm:text-sm">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="space-y-1.5">
                     <label className="block text-slate-100 font-bold">Full Name *</label>
                     <input
@@ -91,6 +112,16 @@ const ContactUs = () => {
                       placeholder="+91 81225 26282"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl bg-[#082f49] border border-[#0284c7]/40 text-white placeholder-slate-300 focus:outline-none focus:border-sky-300 font-semibold"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-slate-100 font-bold">Your Email</label>
+                    <input
+                      type="email"
+                      placeholder="you@example.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-[#082f49] border border-[#0284c7]/40 text-white placeholder-slate-300 focus:outline-none focus:border-sky-300 font-semibold"
                     />
                   </div>
@@ -165,7 +196,17 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <div className="font-bold text-white">Direct Contact Phone</div>
-                    <div className="text-slate-100 mt-0.5 font-semibold">+91 81225 26282</div>
+                    <a href="tel:+918122526282" className="text-slate-100 hover:text-sky-300 transition-colors mt-0.5 font-semibold block">+91 81225 26282</a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-[#0284c7] text-white flex items-center justify-center shrink-0">
+                    <Mail size={18} />
+                  </div>
+                  <div>
+                    <div className="font-bold text-white">Direct Email Consultation</div>
+                    <a href="mailto:forensicselva@gmail.com" className="text-sky-300 hover:text-sky-200 transition-colors mt-0.5 font-bold block">forensicselva@gmail.com</a>
                   </div>
                 </div>
 

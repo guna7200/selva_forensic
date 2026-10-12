@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, ChevronDown, Menu, X } from 'lucide-react';
+import { Phone, Mail, ChevronDown, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,11 @@ const Navbar = () => {
       {/* Top Bar with Hospital Blue */}
       <div className="bg-gradient-to-r from-[#0c4a6e] via-[#0284c7] to-[#0369a1] text-white text-xs py-2 px-4 border-b border-[#38bdf8]/30 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-end items-center">
-          <div className="flex items-center gap-6 font-bold">
+          <div className="flex items-center gap-6 font-bold flex-wrap">
+            <a href="mailto:forensicselva@gmail.com" className="flex items-center gap-1.5 hover:text-sky-200 transition-colors">
+              <Mail size={13} className="text-sky-300" />
+              <span>forensicselva@gmail.com</span>
+            </a>
             <a href="tel:+918122526282" className="flex items-center gap-1.5 hover:text-sky-200 transition-colors">
               <Phone size={13} className="text-sky-300" />
               <span>+91 81225 26282</span>

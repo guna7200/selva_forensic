@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -80,6 +80,10 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-sky-400 shrink-0 mt-0.5" />
                 <span>Selvas Forensic Medical Centre, Online Case Review & Consultation Hub, Available Across India.</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={16} className="text-sky-400 shrink-0" />
+                <a href="mailto:forensicselva@gmail.com" className="hover:text-sky-300 transition-colors">forensicselva@gmail.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-sky-400 shrink-0" />
