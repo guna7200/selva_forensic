@@ -28,27 +28,49 @@ const ContactUs = () => {
     setErrorMsg('');
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          access_key: 'b0bb2f97-86dd-412c-a6eb-2177d31a495c',
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email || 'Not provided',
-          category: categoryLabels[formData.category] || formData.category,
-          message: formData.message,
-          subject: `New Case Consultation Request - ${formData.name}`,
-          from_name: 'SELVAS Forensic Medical Centre'
-        })
-      });
+      const formPayload = new FormData();
+      formPayload.append('access_key', 'b0bb2f97-86dd-412c-a6eb-2177d31a495c');
+      formPayload.append('name', formData.name);
+      formPayload.append('phone', formData.phone);
+      formPayload.append('email', formData.email || 'Not provided');
+      formPayload.append('category', categoryLabels[formData.category] || formData.category);
+      formPayload.append('message', formData.message);
+      formPayload.append('subject', `New Case Consultation Request - ${formData.name}`);
+      formPayload.append('from_name', 'SELVAS Forensic Medical Centre');
 
-      const data = await response.json();
+      let success = false;
 
-      if (data.success) {
+      // 1. Primary Attempt: Web3Forms API with FormData
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formPayload
+        });
+        const data = await response.json();
+        if (data.success) {
+          success = true;
+        }
+      } catch (err) {
+        console.warn('Web3Forms attempt error, trying server fallback...', err);
+      }
+
+      // 2. Fallback Attempt: Native cPanel /contact.php
+      if (!success) {
+        try {
+          const phpResponse = await fetch('/contact.php', {
+            method: 'POST',
+            body: formPayload
+          });
+          const phpData = await phpResponse.json();
+          if (phpData.success) {
+            success = true;
+          }
+        } catch (phpErr) {
+          console.warn('Server contact.php fallback error...', phpErr);
+        }
+      }
+
+      if (success) {
         setSubmitted(true);
         setFormData({
           name: '',
@@ -58,10 +80,10 @@ const ContactUs = () => {
           message: ''
         });
       } else {
-        setErrorMsg(data.message || 'Submission failed. Please try again or call us directly.');
+        setErrorMsg('Submission could not be completed. Please contact us directly at +91 81225 26282 or forensicselva@gmail.com.');
       }
     } catch (err) {
-      setErrorMsg('Network error. Please check your connection or contact us at +91 81225 26282 / forensicselva@gmail.com.');
+      setErrorMsg('Network error. Please call +91 81225 26282 or email forensicselva@gmail.com.');
     } finally {
       setIsSubmitting(false);
     }
