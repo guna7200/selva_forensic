@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, ShieldCheck, Send, CheckCircle2, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, ShieldCheck, Send, CheckCircle2, Clock, AlertCircle, Loader2 } from 'lucide-react';
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -20,20 +22,49 @@ const ContactUs = () => {
     corporates: 'Corporate Scrutiny & Safety'
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMsg('');
 
-    const subject = encodeURIComponent(`Confidential Case Review Request - ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\n` +
-      `Phone: ${formData.phone}\n` +
-      `Email: ${formData.email || 'Not provided'}\n` +
-      `Service Category: ${categoryLabels[formData.category] || formData.category}\n\n` +
-      `Case Summary & Key Questions:\n${formData.message}\n`
-    );
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: 'b0bb2f97-86dd-412c-a6eb-2177d31a495c',
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email || 'Not provided',
+          category: categoryLabels[formData.category] || formData.category,
+          message: formData.message,
+          subject: `New Case Consultation Request - ${formData.name}`,
+          from_name: 'SELVAS Forensic Medical Centre'
+        })
+      });
 
-    window.location.href = `mailto:forensicselva@gmail.com?subject=${subject}&body=${body}`;
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          category: 'family',
+          message: ''
+        });
+      } else {
+        setErrorMsg(data.message || 'Submission failed. Please try again or call us directly.');
+      }
+    } catch (err) {
+      setErrorMsg('Network error. Please check your connection or contact us at +91 81225 26282 / forensicselva@gmail.com.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -155,6 +186,13 @@ const ContactUs = () => {
                   ></textarea>
                 </div>
 
+                {errorMsg && (
+                  <div className="p-3.5 rounded-xl bg-rose-500/20 border-2 border-rose-400 text-rose-200 text-xs sm:text-sm font-bold flex items-center gap-2.5 shadow-md">
+                    <AlertCircle size={18} className="text-rose-400 shrink-0" />
+                    <span>{errorMsg}</span>
+                  </div>
+                )}
+
                 <div className="p-3 rounded-xl bg-[#082f49] border border-sky-300/30 text-xs text-sky-200 font-bold flex items-center gap-2">
                   <ShieldCheck size={16} className="shrink-0 text-sky-300" />
                   <span>Your medical and personal information is strictly protected under client privilege.</span>
@@ -162,9 +200,20 @@ const ContactUs = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0284c7] via-[#0369a1] to-[#0ea5e9] hover:from-[#38bdf8] hover:to-[#0284c7] text-white font-black text-sm shadow-xl flex items-center justify-center gap-2 transition-all uppercase tracking-wider border border-sky-300/30"
+                  disabled={isSubmitting}
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#0284c7] via-[#0369a1] to-[#0ea5e9] hover:from-[#38bdf8] hover:to-[#0284c7] disabled:opacity-60 text-white font-black text-sm shadow-xl flex items-center justify-center gap-2 transition-all uppercase tracking-wider border border-sky-300/30 cursor-pointer disabled:cursor-not-allowed"
                 >
-                  <Send size={16} /> Submit Case Details
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 size={18} className="animate-spin" />
+                      <span>Submitting Case Details...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send size={16} />
+                      <span>Submit Case Details</span>
+                    </>
+                  )}
                 </button>
               </form>
             )}
